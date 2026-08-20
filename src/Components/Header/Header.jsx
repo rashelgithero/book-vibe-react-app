@@ -3,7 +3,10 @@ import { NavLink } from 'react-router'
 const links = [
     <li><NavLink to='/home' className={({isActive}) => `${isActive ? "btn btn-outline btn-success text-lg": ''} text-lg`}>Home</NavLink></li>,
     <li><NavLink to='/listedBook' className={({isActive}) => `${isActive ? "btn btn-outline btn-success text-lg": ''} text-lg`}>Listed Books</NavLink></li>,
-    <li><NavLink to='/pagesToRead' className={({isActive}) => `${isActive ? "btn btn-outline btn-success text-lg": ''} text-lg`}>Pages to Read</NavLink></li>
+    <li><NavLink to='/pagesToRead' className={({isActive}) => `${isActive ? "btn btn-outline btn-success text-lg": ''} text-lg`}>Pages to Read</NavLink></li>,
+    <li><NavLink to='/featuredArticles' className={({isActive}) => `${isActive ? "btn btn-outline btn-success text-lg": ''} text-lg`}>Features</NavLink></li>,
+    <li><NavLink to='/reviews' className={({isActive}) => `${isActive ? "btn btn-outline btn-success text-lg": ''} text-lg`}>Reviews</NavLink></li>
+
 ]
 function Header() {
   return (
