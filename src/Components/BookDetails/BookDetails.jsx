@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLoaderData, useParams } from 'react-router'
 import { toast, ToastContainer } from 'react-toastify';
-import { getToLocalStorage, setToLocalStorage } from '../../utilities/localStorage';
+import { getToLocalStorage, removeToLocalStorage, setToLocalStorage } from '../../utilities/localStorage';
 
 function BookDetails() {
     const {id} = useParams();
@@ -12,17 +12,6 @@ function BookDetails() {
     // const [storedBooks, setStoredBooks] = useState('');
     const [bookList, setBookList] = useState([]);
     const [read, setRead] = useState([])
-    // useEffect(() => {
-    //     const storageBooks = getToLocalStorage(activeTab);
-    //     if(books.length > 0){
-    //         const targetKey = type
-    //         // let booksStore = [];
-    //         // for( const id of storageBooks){
-    //         //     booksStore.push(id)
-    //         // }
-    //         // setBookList(booksStore);
-    //     }
-    // },[activeTab])
     
     const handleBookButton = (spacifyButton) =>{
         setActiveTab(spacifyButton)
@@ -48,9 +37,16 @@ function BookDetails() {
         }
         else if(spacifyButton === 'read'){
             if(!findReadBook){
-                setRead(currentReadList)
-                setToLocalStorage(spacifyButton, bookId)
-                toast(`You Have Successfully Added Read`)
+                if(findWishBook){
+                    setToLocalStorage(spacifyButton, bookId)
+                    toast(`You Have Successfully Added Read`)
+                    removeToLocalStorage('wishlist', bookId)
+                    console.log(currentWishList)
+                }
+                else{
+                     setToLocalStorage(spacifyButton, bookId)
+                    toast(`You Have Successfully Added Read`)
+                }
             }
             else{
                 toast.error(`You already Added Read`)
@@ -59,8 +55,8 @@ function BookDetails() {
    }
     
   return (
-    <div className="card card-side gap-5 md:gap-5 lg:gap-20 mt-10 container mx-auto p-2 w-full flex flex-col md:flex-row">
-        <figure className='min-h-screen p-20 md:p-10 lg:p-16 w-full md:w-1/2 bg-base-200 rounded-2xl'>
+    <div className="card card-side gap-5 md:gap-5 lg:gap-20 mt-10 container mx-auto p-2 w-full flex flex-col md:flex-row mb-10">
+        <figure className='min-h-fit px-20 py-5 md:px-10 md:py-5 lg:px-16 lg:py-5 w-full md:w-1/2 bg-base-200 rounded-2xl'>
             <img
             src={image}
             alt="Movie" 

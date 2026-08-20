@@ -15,7 +15,7 @@ function Header() {
             </div>
             <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow space-y-5">
+                className="menu menu-sm dropdown-content rounded-box  mt-3 w-52 p-2 shadow space-y-5 bg-blue-100 z-20">
                 {
                     links
                 }

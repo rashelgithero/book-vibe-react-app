@@ -7,7 +7,7 @@ function Book({book, handleBookDetails}) {
         <figure className='bg-[#F3F3F3] p-5 w-full h-90'>
             <img className='max-w-75 max-h-80'
             src={image}
-            alt="" />
+            alt=""/>
         </figure>
         <div className="card-body">
             <div className='flex flex-wrap gap-x-3 gap-y-3 justify-between text-[#23BE0A]'>
