@@ -40,7 +40,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'featuredArticles',
-        element: <FeaturedArticles></FeaturedArticles>
+        element: <FeaturedArticles></FeaturedArticles>,
+        loader: () => fetch('/book.json')
       },
       {
         path: 'reviews',
