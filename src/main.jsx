@@ -9,10 +9,12 @@ import Roots from './Components/Roots/Roots.jsx'
 import ListedBook from './Components/ListedBook/ListedBook.jsx'
 import PagesToRoad from './Components/PagesToRead/PagesToRoad.jsx'
 import BookDetails from './Components/BookDetails/BookDetails.jsx'
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Roots></Roots>,
+    errorElement: <NotFoundPage></NotFoundPage>,
     children:[
       {
         path:'home',
