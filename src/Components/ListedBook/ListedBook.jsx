@@ -27,6 +27,9 @@ function ListedBook() {
   console.log(sortedBooks)
   return (
     <div className='p-2'>
+      <div className='text-center bg-[#1313130F] p-8 rounded-xl mb-8'>
+          <h1 className='font-bold text-3xl'>Books</h1>
+        </div>
       <div className='p-2 flex justify-center'>
         <div className="dropdown dropdown-center">
           <div tabIndex={0} role="button" className="btn m-1 flex items-center justify-center bg-green-500 text-white">
