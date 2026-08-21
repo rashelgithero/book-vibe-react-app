@@ -1,17 +1,13 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the Oxlint configuration
+## 🚀 Key Features & Characteristics
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# book-vibe-react-app
+* **Dynamic Reading Challenge Tracker:** Features a dynamic progress bar that automatically calculates and displays your yearly reading progress by cross-referencing your saved `localStorage` data with your target goal.
+* **Smart Book Filtering & Suggestions:** Automatically identifies books missing from your "Read" list and dynamically populates a "More Suggested Books" section so you always know what to read next.
+* **Persistent Browser Storage (No Login Needed):** Uses browser `localStorage` utilities to seamlessly persist your "Read Books" and "Wishlist" selections without requiring user authentication.
+* **Detailed Book View & Routing:** Built using `react-router-dom` with parameterized routes (`/bookDetails/:bookId`) to render rich details, tag chips, publisher metadata, and ratings for every individual title.
+* **Fully Responsive & Clean UI:** Designed with **DaisyUI** and **Tailwind CSS**, providing a mobile-friendly grid layout, interactive visual hover states, and seamless tabbed navigation.
